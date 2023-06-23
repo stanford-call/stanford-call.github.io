@@ -17,6 +17,7 @@ layout: home
   <li><a href="https://rohany.github.io/">Rohan Yadav</a> (PhD)</li>
 
   <li>James Dong (PhD)</li>
+  <li><a href="https://www.linkedin.com/in/lrubens">Rubens Lacouture</a> (PhD)</li>
   <li><a href="https://shivsundram.github.io/">Shiv Sundram</a> (PhD)</li>
   <li><a href="https://bobbyy.org/">Bobby Yan</a> (PhD)</li>
   
