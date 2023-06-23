@@ -1,0 +1,229 @@
+# Alphabetically ordered.
+
+
+ahrens:
+  name: Willow Ahrens
+  site: http://willowahrens.io/
+
+aiken:
+  name: Alex Aiken
+  site: http://theory.stanford.edu/~aiken/
+
+amarasinghe:
+  name: Saman Amarasinghe
+  site: http://people.csail.mit.edu/saman/
+
+bahr:
+  name: Rick Bahr
+
+bansal:
+  name: Manya Bansal
+
+barrett:
+  name: Clark Barrett
+
+bhagdikar:
+  name: Nikhil Bhagdikar
+
+bik:
+  name: Aart J.C Bik
+
+carsello:
+  name: Alex Carsello
+
+chen:
+  name: Po-Han Chen
+
+chou:
+  name: Stephen Chou
+  site: http://people.csail.mit.edu/s3chou
+
+daly:
+  name: Ross Daly
+
+donenfeld:
+  name: Daniel Donenfeld
+
+donovick:
+  name: Caleb Donovick
+
+durst:
+  name: David Durst
+
+ejjeh:
+  name: Adel Ejjeh
+  site: https://www.linkedin.com/in/adel-ejjeh
+
+emer:
+  name: Joel Emer
+
+gu:
+  name: Timothy Gu
+
+fatahalian:
+  name: Kayvon Fatahalian
+
+feng:
+  name: Kathleen Feng
+
+hanrahan:
+  name: Pat Hanrahan
+
+hellsten:
+  name: Erik Hellsten
+
+henry: 
+  name: Rawn Henry
+
+hofstee:
+  name: Teguh Hofstee
+
+hong:
+  name: Changwan Hong
+
+horowitz:
+  name: Mark Horowitz
+
+hsu: 
+  name: Olivia Hsu
+  site: https://weiya711.github.io/
+
+huff:
+  name: Dillon Huff
+
+kamil:
+  name: Shoaib Kamil
+  site: http://people.csail.mit.edu/skamil/
+
+kjolstad:
+  name: Fredrik Kjolstad
+  site: http://fredrikbk.com
+
+koanantakool:
+  name: Penporn Koanantakool
+
+kolichala:
+  name: Praneeth Kolichala
+
+kong:
+  name: Taeyoung Kong
+
+koul:
+  name: Kalhan Koul
+
+kovach:
+  name: Scott Kovach
+
+lacouture:
+  name: Rubens Lacouture
+  site: https://www.linkedin.com/in/lrubens/
+
+lenfers:
+  name: Johannes Lenfers
+
+liu:
+  name: Qiaoyi Liu
+
+mann:
+  name: Makai Mann
+
+mei:
+  name: Yuchen Mei
+
+melchert:
+  name: Jackson Melchert
+
+mueller:
+  name: Suzanne Mueller
+  
+myers:
+  name: Zachary Myers
+
+nardi:
+  name: Luigi Nardi
+  site: https://cs.lth.se/luigi-nardi/
+
+nayak:
+  name: Ankita Nayak
+
+niemetz:
+  name: Aina Niemetz
+
+nyengele:
+  name: Gedeon Nyengele
+
+olukotun:
+  name: Kunle Olukotun
+  site: http://arsenalfc.stanford.edu/kunle/
+
+raina:
+  name: Priyanka Raina
+
+richardson:
+  name: Stephen Richardson
+
+senanayake:
+  name: Ryan Senanayake
+
+setaluri:
+  name: Raj Setaluri
+
+setter:
+  name: Jeff Setter
+
+sharma:
+  name: Ritvik Sharma
+
+shpeisman:
+  name: Tatiana Shpeisman
+
+souza:
+  name: Artur Souza
+
+sreedhar:
+  name: Kavya Sreedhar
+
+steuwer:
+  name: Michel Steuwer
+  site: https://michel.steuwer.info/
+
+strange:
+  name: Maxwell Strange
+
+thomas:
+  name: James Thomas
+
+torng:
+  name: Christopher Torng
+
+truong:
+  name: Leonard Truong
+
+tsiskaridze:
+  name: Nestan Tsiskaridze
+
+vasilache:
+  name: Nicolas Vasilache
+
+wang:
+  name: Ziheng Wang
+
+wilson:
+  name: Amalee Wilson
+
+won:
+  name: Jaeyeon Won
+
+xu:
+  name: Haoran Xu
+  site: https://sillycross.github.io/about/
+
+yadav: 
+  name: Rohan Yadav
+  site: https://rohany.github.io/
+
+zhang:
+  name: Keyi Zhang
+
+zheng:
+  name: Bixia Zheng

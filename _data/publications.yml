@@ -1,0 +1,641 @@
+asplos2024:
+  title: "BaCO: A Fast and Portable Bayesian Compiler Optimization Framework"
+  abstract: "<p>
+    We introduce the Bayesian Compiler Optimization framework (BaCO), a general
+    purpose autotuner for modern compilers targeting CPUs, GPUs, and FPGAs. BaCO
+    provides the flexibility needed to handle the requirements of modern autotuning
+    tasks. Particularly, it deals with permutation, ordered, and continuous
+    parameter types along with both known and unknown parameter constraints. To
+    reason about these parameter types and efficiently deliver high-quality code,
+    BaCO uses Bayesian optimization algorithms specialized towards the autotuning
+    domain. We demonstrate BaCO's effectiveness on three modern compiler systems:
+    TACO, RISE & ELEVATE, and HPVM2FPGA for CPUs, GPUs, and FPGAs respectively. For
+    these domains, BaCO outperforms current state-of-the-art autotuners by
+    delivering on average 1.39x-1.89x faster code with a tiny search budget, and
+    BaCO is able to reach expert-level performance 2.89x-8.77x faster.
+    </p>"
+  venue: "International Conference on Architectural Support for Programming Languages and Operating Systems (to appear)"
+  venuenote: "ASPLOS"
+  year: 2024
+  month: April
+  authors:
+    - hellsten
+    - souza
+    - lenfers
+    - lacouture
+    - hsu
+    - ejjeh
+    - kjolstad
+    - steuwer
+    - olukotun
+    - nardi
+
+pldi23-etch:
+  title: "Indexed Streams: A Formal Intermediate Representation for the Fused Execution of Contraction Operations"
+  abstract: "<p>
+    We introduce indexed streams, a formal operational model and intermediate
+    representation that describes the fused execution of a contraction language
+    that encompasses both sparse tensor algebra and relational algebra. We
+    prove that the indexed stream model is correct with respect to a functional
+    semantics. We also develop a compiler for contraction expressions that uses
+    indexed streams as an intermediate representation. The compiler is only 540
+    lines of code, but we show that its performance can match both the TACO
+    compiler for sparse tensor algebra and the SQLite and DuckDB query
+    processing libraries for relational algebra.
+  </p>"
+  venue: "ACM SIGPLAN Conference on Programming Language Design and Implementation (to appear)"
+  venuenote: "PLDI"
+  year: 2023
+  month: June
+  authors:
+    - kovach
+    - kolichala
+    - gu
+    - kjolstad
+
+pldi23-mosaic:
+  title: "Mosaic: An Interoperable Compiler for Tensor Algebra"
+  abstract: "<p>
+    We introduce Mosaic, a sparse tensor algebra compiler that binds tensor
+    (sub-)expressions to external functions of other tensor algebra libraries
+    and compilers. Users can extend Mosaic by adding new functions and can bind
+    a sub-computation to a function using a scheduling API. Mosaic substitutes
+    the bound (sub-)expressions with the specified function call and
+    automatically fills in the rest of the unbound code using a default code
+    generator. Mosaic also offers a search system that can automatically map an
+    expression to a set of registered external functions. Both the explicit
+    binding and automatic search are verified by Mosaic. We demonstrate the
+    benefits of our approach by showing that calling hand-written CPU and
+    specialized hardware functions can provide speedup of up to 206x (for an
+    SDDMM expression) and 173x (for an SpMV expression), respectively, over a
+    homogeneous compiler. Mosaic's external function interface is simple and
+    general. Currently, 38 external functions have been added to Mosaic, with
+    each addition averaging 20 lines of code.
+  </p>"
+  venue: "ACM SIGPLAN Conference on Programming Language Design and Implementation (to appear)"
+  venuenote: "PLDI"
+  year: 2023
+  month: June
+  award: "Distinguished Paper Award"
+  authors:
+    - bansal
+    - hsu
+    - olukotun
+    - kjolstad
+
+asplos23:
+  title: "The Sparse Abstract Machine"
+  abstract: "<p>
+    We propose the Sparse Abstract Machine (SAM), an intermediate
+    representation and abstract machine model for targeting sparse tensor
+    algebra to reconfigurable and fixed-function spatial dataflow accelerators.
+    SAM defines a streaming abstraction with sparse primitives that encompass a
+    large space of scheduled tensor algebra expressions. SAM dataflow graphs
+    naturally separate tensor formats from algorithms and is expressive enough
+    to incorporate many sparse-iteration and hardware-specific optimizations.
+    We show an automatic compilation technique from a high-level language to
+    SAM and a set of hardware primitives which implement it. We evaluate the
+    generality and extensibility of our sparse abstract machine, explore the
+    performance space of sparse tensor algebra optimizations using SAM, and
+    provide an example implementation of our SAM architecture.
+  </p>"
+  venue: "Architectural Support for Programming Languages and Operating Systems"
+  venuenote: "ASPLOS"
+  year: 2023
+  month: March
+  authors:
+    - hsu
+    - strange
+    - sharma 
+    - won
+    - olukotun
+    - emer
+    - horowitz
+    - kjolstad
+
+taco23-ubuffer:
+  title: "Unified Buffer: Compiling Image Processing and Machine Learning Applications to Push-Memory Accelerators"
+  abstract: "<p>
+    Image processing and machine learning applications benefit
+    tremendously from hardware acceleration. Existing compilers
+    target either FPGAs, which sacrifice power and performance for
+    programmability, or ASICs, which become obsolete as
+    applications change. Programmable domain-specific
+    accelerators, such as coarse-grained reconfigurable arrays
+    (CGRAs), have emerged as a promising middle-ground, but they
+    have traditionally been difficult compiler targets since they
+    use a different memory abstraction. In contrast to CPUs and
+    GPUs, the memory hierarchies of domain-specific accelerators
+    use push memories: memories that send input data streams to
+    computation kernels or to higher or lower levels in the memory
+    hierarchy, and store the resulting output data streams. To address
+    the compilation challenge caused by push memories, we propose that
+    the representation of these memories in the compiler be altered to
+    directly represent them by combining storage with address
+    generation and control logic in a single structure—a unified
+    buffer.
+    </p><p>
+    The unified buffer abstraction enables the compiler to separate
+    generic push memory optimizations from the mapping to specific
+    memory implementations in the backend. This separation allows our
+    compiler to map high-level Halide applications to different CGRA
+    memory designs, including some with a ready-valid interface. The
+    separation also opens the opportunity for optimizing push memory
+    elements on reconfigurable arrays. Our optimized memory
+    implementation, the Physical Unified Buffer (PUB), uses a
+    wide-fetch, single-port SRAM macro with built-in address
+    generation logic to implement a buffer with two read and two write
+    ports. It is 18% smaller and consumes 31% less energy than a
+    physical buffer implementation using a dual-port memory that only
+    supports two ports.
+    </p><p>
+    Finally, our system evaluation shows that enabling a compiler to
+    support CGRAs leads to performance and energy benefits. Over a
+    wide range of image processing and machine learning applications,
+    our CGRA achieves 4.7x better runtime and 3.5: better
+    energy-efficiency compared to an FPGA.
+  </p>"
+  venue: "ACM Transactions on Architecture and Code Optimization"
+  venuenote: "TACO"
+  year: 2023
+  month: March 
+  authors:
+    - liu
+    - setter 
+    - huff
+    - strange
+    - feng
+    - horowitz
+    - raina
+    - kjolstad
+
+cgo23:
+  title: "Looplets: A Language For Structured Coiteration"
+  abstract: "<p>
+    Real world arrays often contain underlying structure, such as sparsity,
+    runs of repeated values, or symmetry. Specializing for structure yields
+    significant speedups. But automatically generating efficient code for
+    structured data is challenging, especially when arrays with different
+    structure interact. We show how to abstract over array structures so that
+    the compiler can generate code to coiterate over any combination of them.
+    Our technique enables new array formats (such as 1DVBL for irregular
+    clustered sparsity), new iteration strategies (such as galloping
+    intersections), and new operations over structured data (such as
+    concatenation or convolution).
+  </p>"
+  venue: "International Symposium on Code Generation and Optimization"
+  venuenote: "CGO"
+  year: 2023
+  month: February
+  authors:
+    - ahrens
+    - donenfeld
+    - kjolstad
+    - amarasinghe
+
+aha23:
+  title: "AHA: An agile approach to the design of coarse-grained reconfigurable accelerators and compilers"
+  abstract: "<p>
+    With the slowing of Moore’s law, computer architects have turned to
+    domain-speciic hardware specialization to continue improving the
+    performance and eiciency of computing systems. However, specialization
+    typically entails signiicant modii- cations to the software stack to
+    properly leverage the updated hardware. The lack of a structured approach
+    for updating both the compiler and the accelerator in tandem has impeded
+    many attempts to systematize this procedure. We propose a new approach to
+    enable lexible and evolvable domain-speciic hardware specialization based
+    on coarse-grained reconigurable arrays (CGRAs). Our agile methodology
+    employs a combination of new programming languages and formal methods to
+    automatically generate the accelerator hardware and its compiler from a
+    single source of truth. This enables the creation of design-space
+    exploration frameworks that automatically generate accelerator
+    architectures that approach the eiciencies of hand-designed accelerators,
+    with a signiicantly lower design efort for both hardware and compiler
+    generation. Our current system accelerates dense linear algebra
+    applications, but is modular and can be extended to support other domains.
+    Our methodology has the potential to signiicantly improve the productivity
+    of hardware-software engineering teams and enable quicker customization and
+    deployment of complex accelerator-rich computing systems.
+  </p>"
+  venue: "ACM Transactions on Embedded Computing Systems"
+  venuenote: "TECS"
+  year: 2023
+  month: January
+  pdf: /publications/aha-tecs.pdf
+  authors:
+    - koul
+    - melchert
+    - sreedhar
+    - truong
+    - nyengele
+    - zhang
+    - liu
+    - setter
+    - chen
+    - mei 
+    - strange
+    - daly
+    - donovick
+    - carsello
+    - kong
+    - feng
+    - huff
+    - nayak 
+    - setaluri
+    - thomas
+    - bhagdikar
+    - durst
+    - myers
+    - tsiskaridze
+    - richardson
+    - bahr
+    - fatahalian
+    - hanrahan
+    - barrett
+    - horowitz
+    - torng
+    - kjolstad
+    - raina
+
+sc22-spdistal:
+  title: "SpDISTAL: Compiling Distributed Sparse Tensor Computations"
+  abstract: "<p>
+    DescriptionWe introduce SpDISTAL, a compiler for sparse tensor algebra that
+    targets distributed systems. SpDISTAL combines separate descriptions of
+    tensor algebra expressions, sparse data structures, data distribution, and
+    computation distribution. Thus, it enables distributed execution of sparse
+    tensor algebra expressions with a wide variety of sparse data structures
+    and data distributions. SpDISTAL is implemented as a C++ library that
+    targets a distributed task-based runtime system and can generate code for
+    nodes with both multi-core CPUs and multiple GPUs. SpDISTAL generates
+    distributed code that achieves performance competitive with hand-written
+    distributed functions for specific sparse tensor algebra expressions and
+    that outperforms general interpretation-based systems by one to two orders
+    of magnitude.
+  </p>"
+  venue: "ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis"
+  venuenote: "SC"
+  year: 2022
+  month: November
+  pdf: /publications/spdistal.pdf
+  authors:
+    - yadav
+    - aiken
+    - kjolstad
+
+taco22-mlir-sparse:
+  title: "Compiler Support for Sparse Tensor Computations in MLIR"
+  abstract: "<p>
+    Sparse tensors arise in problems in science, engineering, machine learning,
+    and data analytics. Programs that operate on such tensors can exploit
+    sparsity to reduce storage requirements and computational time. Developing
+    and maintaining sparse software by hand, however, is a complex and
+    error-prone task. Therefore, we propose treating sparsity as a property of
+    tensors, not a tedious implementation task, and letting a sparse compiler
+    generate sparse code automatically from a sparsity-agnostic definition of
+    the computation. This paper discusses integrating this idea into MLIR.
+  </p>"
+  venue: "ACM Transactions on Architecture and Code Optimization"
+  venuenote: "TACO"
+  year: 2022
+  month: September
+  pdf: /publications/mlir-sparse.pdf
+  authors:
+    - bik
+    - koanantakool
+    - shpeisman
+    - vasilache
+    - zheng
+    - kjolstad
+
+pldi22-distal:
+  title: "DISTAL: The Distributed Tensor Algebra Compiler"
+  abstract: "<p>
+    We introduce DISTAL, a compiler for dense tensor algebra that targets
+    modern distributed and heterogeneous systems. DISTAL lets users
+    independently describe how tensors and computation map onto target machines
+    through separate format and scheduling languages. The combination of
+    choices for data and computation distribution creates a large design space
+    that includes many algorithms from both the past (e.g., Cannon's algorithm)
+    and present (e.g., COSMA). DISTAL compiles a tensor algebra domain specific
+    language to a distributed task-based runtime system and supports both nodes
+    with multi-core CPUs and multiple GPUs. Code generated by DISTAL is
+    competitive with optimized codes for matrix multiply on 256 nodes of the
+    Lassen supercomputer and outperforms existing systems by between 1.8x to
+    3.7x (with a 45.7x outlier) on higher order tensor operations.
+  </p>"
+  venue: "ACM SIGPLAN Conference on Programming Language Design and Implementation"
+  venuenote: "PLDI"
+  year: 2022
+  month: June
+  authors:
+    - yadav
+    - aiken
+    - kjolstad
+  pdf: /publications/distal.pdf
+
+pldi22-autoscheduling:
+  title: Autoscheduling for Sparse Tensor Algebra with an Asymptotic Cost Model
+  abstract: "<p>
+    While loop reordering and fusion can make big impacts on the
+    constant-factor performance of dense tensor programs, the effects on sparse
+    tensor programs are asymptotic, often leading to orders of magnitude
+    performance differences in practice. Sparse tensors also introduce a choice
+    of compressed storage formats that can have asymptotic effects. Research
+    into sparse tensor compilers has led to simplified languages that express
+    these tradeoffs, but the user is expected to provide a schedule that makes
+    the decisions. This is challenging because schedulers must anticipate the
+    interaction between sparse formats, loop structure, potential sparsity
+    patterns, and the compiler itself. Automating this decision making process
+    stands to finally make sparse tensor compilers accessible to end users.
+    </p><p>
+    We present, to the best of our knowledge, the first automatic asymptotic
+    scheduler for sparse tensor programs. We provide an approach to abstractly
+    represent the asymptotic cost of schedules and to choose between them. We
+    narrow down the search space to a manageably small Pareto frontier of
+    asymptotically undominated kernels. We test our approach by compiling these
+    kernels with the TACO sparse tensor compiler and comparing them with those
+    generated with the default TACO schedules. Our results show that our
+    approach reduces the scheduling space by orders of magnitude and that the
+    generated kernels perform asymptotically better than those generated using
+    the default schedules.
+  </p>"
+  venue: "ACM SIGPLAN Conference on Programming Language Design and Implementation"
+  venuenote: "PLDI"
+  year: 2022
+  month: June
+  authors:
+    - ahrens
+    - kjolstad
+    - amarasinghe
+  pdf: /publications/asymptotic-autoscheduling.pdf
+
+copy-and-patch:
+  title: Copy-and-Patch Compilation
+  abstract: "<p>
+    Fast compilation is important when compilation occurs at runtime, such as
+    query compilers in modern database systems and WebAssembly virtual machines
+    in modern browsers. We present copy-and-patch, an extremely fast
+    compilation technique that also produces good quality code. It is capable
+    of lowering both high-level languages and low-level bytecode programs to
+    binary code, by stitching together code from a large library of binary
+    implementation variants. We call these binary implementations stencils
+    because they have holes where missing values must be inserted during code
+    generation. We show how to construct a stencil library and describe the
+    copy-and-patch algorithm that generates optimized binary code.
+    </p><p>
+    We demonstrate two use cases of copy-and-patch: a compiler for a high-level
+    C-like language intended for metaprogramming and a compiler for WebAssembly.
+    Our high-level language compiler has negligible compilation cost: it produces
+    code from an AST in less time than it takes to construct the AST. We have
+    implemented an SQL database query compiler on top of this metaprogramming
+    system and show that on TPC-H database benchmarks, copy-and-patch generates
+    code two orders of magnitude faster than LLVM -O0 and three orders of
+    magnitude faster than higher optimization levels. The generated code runs an
+    order of magnitude faster than interpretation and 14% faster than LLVM -O0.
+    Our WebAssembly compiler generates code 4.9X-6.5X faster than Liftoff, the
+    WebAssembly baseline compiler in Google Chrome. The generated code also
+    outperforms Liftoff's by 39%-63% on the Coremark and PolyBenchC WebAssembly
+    benchmarks.
+    </p>"
+  venue: "Proceedings of the ACM on Programming Languages"
+  volume: 5
+  issue: OOPSLA
+  year: 2021
+  month: November
+  award: "Distinguished Paper Award"
+  authors:
+    - xu
+    - kjolstad
+  appendix: /publications/copy-and-patch-appendix.pdf
+  pdf: /publications/copy-and-patch.pdf
+  movie: https://youtu.be/PaQJcBdwG9Y
+  embeddedmovie: <iframe width="560" height="315" src="https://www.youtube.com/embed/PaQJcBdwG9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+oopsla21array:
+  title: Compilation of Sparse Array Programming Models 
+  abstract: "<p>
+    This paper shows how to compile sparse array programming languages. A sparse array 
+    programming language is an array programming language that supports element-wise 
+    application, reduction, and broadcasting of arbitrary functions over dense and sparse 
+    arrays with any fill value. Such a language has great expressive power and can express 
+    sparse and dense linear and tensor algebra, functions over images, exclusion and 
+    inclusion filters, and even graph algorithms.
+    </p><p>
+    Our compiler strategy generalizes prior work in the literature on sparse tensor 
+    algebra compilation to support any function applied to sparse arrays, instead of 
+    only addition and multiplication. To achieve this, we generalize the notion of sparse 
+    iteration spaces beyond intersections and unions. These iteration spaces are 
+    automatically derived by considering how algebraic properties annotated onto functions 
+    interact with the fill values of the arrays. 
+    </p><p>
+    We then show how to compile these iteration spaces to efficient code. When compared 
+    with two widely-used Python sparse array packages, our evaluation shows that we 
+    generate built-in sparse array library features with a performance of 1.4× to 
+    53.7× when measured against PyData/Sparse for user-defined functions and between 
+    0.98× and 5.53× when measured against SciPy/Sparse for sparse array slicing. Our 
+    technique outperforms PyData/Sparse by 6.58× to 70.3×, and (where applicable) 
+    performs between 0.96× and 28.9× that of a dense NumPy implementation, on end-to-end 
+    sparse array applications. We also implement graph linear algebra kernels in 
+    our system with a performance of between 0.56× and 3.50× compared to that of 
+    the hand-optimized SuiteSparse:GraphBLAS library
+    </p>"
+  year: 2021
+  authors:
+    - henry
+    - hsu
+    - yadav
+    - chou
+    - olukotun
+    - amarasinghe
+    - kjolstad
+  venue: "Proceedings of the ACM on Programming Languages"
+  volume: 5
+  issue: OOPSLA
+  year: 2021
+  month: November
+  appendix: /publications/Sparse_Array_Programming_APPENDIX.pdf
+  pdf: /publications/Sparse_Array_Programming.pdf
+  movie: https://youtu.be/sY_jEfaP8f4 
+  embeddedmovie: <iframe width="560" height="315" src="https://www.youtube.com/embed/sY_jEfaP8f4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    
+oopsla20:
+  title: A Sparse Iteration Space Transformation Framework for Sparse Tensor Algebra
+  abstract: "<p>
+    We address the problem of optimizing sparse tensor algebra in a compiler
+    and show how to define standard loop transformations&mdash;split, collapse, and
+    reorder&mdash;on sparse iteration spaces.  The key idea is to track the
+    transformation functions that map the original iteration space to derived
+    iteration spaces. These functions are needed by the code generator to emit
+    code that maps coordinates between iteration spaces at runtime, since the
+    coordinates in the sparse data structures remain in the original iteration
+    space.  The result is a new iteration order that still iterates  over only
+    the subset of nonzero coordinates defined by the data structures.  We
+    further demonstrate that derived iteration spaces can tile both the
+    universe of coordinates and the subset of nonzero coordinates: the former
+    is analogous to tiling dense iteration spaces, while the latter tiles
+    sparse iteration spaces into statically load-balanced blocks of nonzeros.
+    Tiling the space of nonzeros lets the generated code efficiently exploit
+    heterogeneous compute resources such as threads, vector units, and GPUs.
+    </p><p>
+    We implement these concepts and an associated scheduling API in the
+    open-source TACO system. The scheduling API can be used by performance
+    engineers or it can be the target of an automatic scheduling system. We
+    outline one heuristic autoscheduling system, but many other systems are
+    both possible and enabled by our API. Using the scheduling API, we show how
+    to optimize sparse and mixed sparse-dense tensor algebra expressions on
+    both CPUs and GPUs. Our results show that the sparse transformations are
+    sufficient to generate code with competitive performance to hand-optimized
+    implementations from the literature, while generalizing to all of the
+    tensor algebra.
+    </p>"
+  venue: "Proceedings of the ACM on Programming Languages"
+  volume: 4
+  issue: OOPSLA
+  year: 2020
+  month: November
+  authors:
+    - senanayake
+    - hong
+    - wang
+    - wilson
+    - chou
+    - kamil
+    - amarasinghe
+    - kjolstad
+  pdf: /publications/taco-scheduling.pdf
+  movie: https://youtu.be/0wJsGWA5pTU
+  embeddedmovie: <iframe width="560" height="315" src="https://www.youtube.com/embed/0wJsGWA5pTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+aha20:
+  title: Creating an Agile Hardware Design Flow
+  abstract: "<p>
+  Although an agile approach is standard for software design, how to properly
+  adapt this method to hardware is still an open question. This work addresses
+  this question while building a system on chip (SoC) with specialized
+  accelerators. Rather than using a traditional waterfall design flow, which
+  starts by studying the application to be accelerated, we begin by
+  constructing a complete flow from an application expressed in a high-level
+  domain-specific language (DSL), in our case Halide, to a generic
+  coarse-grained reconfigurable array (CGRA).  As our understanding of the
+  application grows, the CGRA design evolves, and we have developed a suite of
+  tools that tune application code, the compiler, and the CGRA to increase the
+  efficiency of the resulting implementation. To meet our continued need to
+  update parts of the system while maintaining the end-to-end flow, we have
+  created DSL-based hardware generators that not only provide the Verilog
+  needed for the implementation of the CGRA, but also create the collateral
+  that the compiler/mapper/place and route system needs to configure its
+  operation. This work provides a systematic approach for desiging and evolving
+  high-performance and energy-efficient hardware-software systems for any
+  application domain.
+  </p>"
+  venue: "Design Automation Conference"
+  venuenote: "DAC"
+  year: 2020
+  month: July
+  authors:
+    - bahr
+    - barrett
+    - bhagdikar
+    - carsello
+    - daly
+    - donovick
+    - durst
+    - fatahalian
+    - feng
+    - hanrahan
+    - hofstee
+    - horowitz
+    - huff
+    - kjolstad
+    - kong
+    - liu
+    - mann
+    - melchert
+    - nayak
+    - niemetz
+    - nyengele
+    - raina
+    - richardson
+    - setaluri
+    - setter
+    - sreedhar
+    - strange
+    - thomas
+    - torng
+    - truong
+    - tsiskaridze
+    - zhang
+  pdf: /publications/aha.pdf
+
+spaa20:
+  title: "Sparse Tensor Transpositions"
+  abstract: "<p>
+  We present a new algorithm for transposing sparse tensors called Quesadilla.
+  The algorithm converts the sparse tensor data structure to a list of
+  coordinates and sorts it with a fast multi-pass radix algorithm that exploits
+  knowledge of the requested transposition and the tensors input partial
+  coordinate ordering to provably minimize the number of parallel partial
+  sorting passes. We evaluate both a serial and a parallel implementation of
+  Quesadilla on a set of 19 tensors from the FROSTT collection, a set of
+  tensors taken from scientific and data analytic applications. We compare
+  Quesadilla and a generalization, Top-2-sadilla to several state of the art
+  approaches, including the tensor transposition routine used in the SPLATT
+  tensor factorization library. In serial tests, Quesadilla was the best
+  strategy for 60% of all tensor and transposition combinations and improved
+  over SPLATT by at least 19% in half of the combinations. In parallel tests,
+  at least one of Quesadilla or Top-2-sadilla was the best strategy for 52% of
+  all tensor and transposition combinations.
+  </p>"
+  venue: "ACM Symposium on Parallelism in Algorithms and Architectures"
+  venuenote: "SPAA brief announcement"
+  year: 2020
+  month: July
+  authors:
+    - mueller
+    - ahrens
+    - chou
+    - kjolstad
+    - amarasinghe
+  tag: transposition
+  pdf: /publications/taco-transposition.pdf
+
+
+pldi20:
+  title: "Automatic Generation of Efficient Sparse Tensor Format Conversion Routines"
+  abstract: "<p>
+  This paper shows how to generate code that efficiently converts sparse
+  tensors between disparate storage formats (data layouts) like CSR, DIA, ELL,
+  and many others. We decompose sparse tensor conversion into three logical
+  phases: coordinate remapping, analysis, and assembly.  We then develop a
+  language that precisely describes how different formats group together and
+  order a tensor's nonzeros in memory. This enables a compiler to emit code
+  that performs complex reorderings (remappings) of nonzeros when converting
+  between formats.  We additionally develop a query language that can extract
+  complex statistics about sparse tensors, and we show how to emit efficient
+  analysis code that computes such queries. Finally, we define an abstract
+  interface that captures how data structures for storing a tensor can be
+  efficiently assembled given specific statistics about the tensor.  Disparate
+  formats can implement this common interface, thus letting a compiler emit
+  optimized sparse tensor conversion code for arbitrary combinations of a wide
+  range of formats without hard-coding for any specific one.
+  </p><p>
+  Our evaluation shows that our technique generates sparse tensor conversion
+  routines with performance between 0.99 and 2.2x that of hand-optimized
+  implementations in two widely used sparse linear algebra libraries, SPARSKIT
+  and Intel MKL.  By emitting code that avoids materializing temporaries, our
+  technique also outperforms both libraries by between 1.4 and 3.4x for CSC/COO
+  to DIA/ELL conversion.
+  </p>"
+  venue: "ACM SIGPLAN Conference on Programming Language Design and Implementation"
+  venuenote: "PLDI"
+  year: 2020
+  month: June
+  authors:
+    - chou
+    - kjolstad
+    - amarasinghe
+  tag: conversion
+  pdf: /publications/taco-conversion.pdf
+  movie: https://youtu.be/s6JRY8qcjvA
+  embeddedmovie: <iframe width="560" height="315" src="https://www.youtube.com/embed/s6JRY8qcjvA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
