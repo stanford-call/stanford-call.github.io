@@ -8,6 +8,7 @@ layout: home
 <h2 class="tableheading">Members</h2>
 
 <ul>
+  <li><a href="https://fredrikbk.com">Fredrik Kjolstad</a> (PI)</li>
   <li>James Dong (PhD)</li>
   <li><a href="https://weiya711.github.io/">Olivia Hsu</a> (PhD)</li>
   <li><a href="https://www.linkedin.com/in/praneeth-kolichala-ba4a73165/">Praneeth Kolichala</a> (UG/MS)</li>
