@@ -52,6 +52,7 @@ pldi23-etch:
     - kolichala
     - gu
     - kjolstad
+  pdf: /publications/pldi23-etch.pdf
 
 pldi23-mosaic:
   title: "Mosaic: An Interoperable Compiler for Tensor Algebra"
@@ -82,6 +83,7 @@ pldi23-mosaic:
     - hsu
     - olukotun
     - kjolstad
+  pdf: /publications/pldi23-mosaic.pdf
 
 asplos23:
   title: "The Sparse Abstract Machine"
@@ -112,6 +114,7 @@ asplos23:
     - emer
     - horowitz
     - kjolstad
+  pdf: /publications/asplos23.pdf
 
 taco23-ubuffer:
   title: "Unified Buffer: Compiling Image Processing and Machine Learning Applications to Push-Memory Accelerators"
@@ -193,7 +196,7 @@ cgo23:
     - kjolstad
     - amarasinghe
 
-aha23:
+tecs23:
   title: "AHA: An agile approach to the design of coarse-grained reconfigurable accelerators and compilers"
   abstract: "<p>
     With the slowing of Moore’s law, computer architects have turned to
@@ -221,7 +224,6 @@ aha23:
   venuenote: "TECS"
   year: 2023
   month: January
-  pdf: /publications/aha-tecs.pdf
   authors:
     - koul
     - melchert
@@ -256,6 +258,7 @@ aha23:
     - torng
     - kjolstad
     - raina
+  pdf: /publications/tecs23.pdf
 
 sc22-spdistal:
   title: "SpDISTAL: Compiling Distributed Sparse Tensor Computations"
@@ -277,13 +280,13 @@ sc22-spdistal:
   venuenote: "SC"
   year: 2022
   month: November
-  pdf: /publications/spdistal.pdf
   authors:
     - yadav
     - aiken
     - kjolstad
+  pdf: /publications/sc22-spdistal.pdf
 
-taco22-mlir-sparse:
+taco22-mlir:
   title: "Compiler Support for Sparse Tensor Computations in MLIR"
   abstract: "<p>
     Sparse tensors arise in problems in science, engineering, machine learning,
@@ -299,7 +302,6 @@ taco22-mlir-sparse:
   venuenote: "TACO"
   year: 2022
   month: September
-  pdf: /publications/mlir-sparse.pdf
   authors:
     - bik
     - koanantakool
@@ -307,6 +309,7 @@ taco22-mlir-sparse:
     - vasilache
     - zheng
     - kjolstad
+  pdf: /publications/taco22-mlir.pdf
 
 pldi22-distal:
   title: "DISTAL: The Distributed Tensor Algebra Compiler"
@@ -332,9 +335,9 @@ pldi22-distal:
     - yadav
     - aiken
     - kjolstad
-  pdf: /publications/distal.pdf
+  pdf: /publications/pldi22-distal.pdf
 
-pldi22-autoscheduling:
+pldi22-autoschedule:
   title: Autoscheduling for Sparse Tensor Algebra with an Asymptotic Cost Model
   abstract: "<p>
     While loop reordering and fusion can make big impacts on the
@@ -368,9 +371,9 @@ pldi22-autoscheduling:
     - ahrens
     - kjolstad
     - amarasinghe
-  pdf: /publications/asymptotic-autoscheduling.pdf
+  pdf: /publications/pldi22-autoschedule.pdf
 
-copy-and-patch:
+oopsla21-cap:
   title: Copy-and-Patch Compilation
   abstract: "<p>
     Fast compilation is important when compilation occurs at runtime, such as
@@ -407,12 +410,12 @@ copy-and-patch:
   authors:
     - xu
     - kjolstad
-  appendix: /publications/copy-and-patch-appendix.pdf
-  pdf: /publications/copy-and-patch.pdf
+  appendix: /publications/oopsla21-cap_appendix.pdf
+  pdf: /publications/oopsla21-cap.pdf
   movie: https://youtu.be/PaQJcBdwG9Y
   embeddedmovie: <iframe width="560" height="315" src="https://www.youtube.com/embed/PaQJcBdwG9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-oopsla21array:
+oopsla21-arrays:
   title: Compilation of Sparse Array Programming Models 
   abstract: "<p>
     This paper shows how to compile sparse array programming languages. A sparse array 
@@ -454,8 +457,8 @@ oopsla21array:
   issue: OOPSLA
   year: 2021
   month: November
-  appendix: /publications/Sparse_Array_Programming_APPENDIX.pdf
-  pdf: /publications/Sparse_Array_Programming.pdf
+  appendix: /publications/oopsla21-arrays_appendix.pdf
+  pdf: /publications/oopsla21-arrays.pdf
   movie: https://youtu.be/sY_jEfaP8f4 
   embeddedmovie: <iframe width="560" height="315" src="https://www.youtube.com/embed/sY_jEfaP8f4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
     
@@ -503,11 +506,11 @@ oopsla20:
     - kamil
     - amarasinghe
     - kjolstad
-  pdf: /publications/taco-scheduling.pdf
+  pdf: /publications/oopsla20.pdf
   movie: https://youtu.be/0wJsGWA5pTU
   embeddedmovie: <iframe width="560" height="315" src="https://www.youtube.com/embed/0wJsGWA5pTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
-aha20:
+dac20:
   title: Creating an Agile Hardware Design Flow
   abstract: "<p>
   Although an agile approach is standard for software design, how to properly
@@ -566,7 +569,7 @@ aha20:
     - truong
     - tsiskaridze
     - zhang
-  pdf: /publications/aha.pdf
+  pdf: /publications/dac20.pdf
 
 spaa20:
   title: "Sparse Tensor Transpositions"
@@ -598,7 +601,7 @@ spaa20:
     - kjolstad
     - amarasinghe
   tag: transposition
-  pdf: /publications/taco-transposition.pdf
+  pdf: /publications/spaa20.pdf
 
 
 pldi20:
@@ -635,7 +638,6 @@ pldi20:
     - chou
     - kjolstad
     - amarasinghe
-  tag: conversion
-  pdf: /publications/taco-conversion.pdf
+  pdf: /publications/pldi20.pdf
   movie: https://youtu.be/s6JRY8qcjvA
   embeddedmovie: <iframe width="560" height="315" src="https://www.youtube.com/embed/s6JRY8qcjvA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
