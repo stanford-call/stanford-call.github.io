@@ -9,16 +9,20 @@ layout: home
 
 <ul>
   <li><a href="https://fredrikbk.com">Fredrik Kjolstad</a> (PI)</li>
-  <li>James Dong (PhD)</li>
+
   <li><a href="https://weiya711.github.io/">Olivia Hsu</a> (PhD)</li>
-  <li><a href="https://www.linkedin.com/in/praneeth-kolichala-ba4a73165/">Praneeth Kolichala</a> (UG/MS)</li>
-  <li>Scott Kovach (PhD)</li>
-  <li><a href="https://www.linkedin.com/in/lrubens">Rubens Lacouture</a> (PhD)</li>
-  <li><a href="https://rootjalex.github.io/">Alexander Root</a> (PhD)</li>
-  <li><a href="https://shivsundram.github.io/">Shiv Sundram</a> (PhD)</li>
+  <li><a href="https://cutfree.net">Scott Kovach</a> (PhD)</li>
   <li><a href="https://sillycross.github.io/about/">Haoran Xu</a> (PhD)</li>
+
   <li><a href="https://rohany.github.io/">Rohan Yadav</a> (PhD)</li>
+
+  <li>James Dong (PhD)</li>
+  <li><a href="https://shivsundram.github.io/">Shiv Sundram</a> (PhD)</li>
   <li><a href="https://bobbyy.org/">Bobby Yan</a> (PhD)</li>
+  
+  <li><a href="https://rootjalex.github.io/">Alexander Root</a> (PhD)</li>
+
+  <li><a href="https://www.linkedin.com/in/praneeth-kolichala-ba4a73165/">Praneeth Kolichala</a> (UG/MS)</li>
 </ul>
 
 <h2 class="tableheading">Alumni</h2>
