@@ -1,4 +1,4 @@
-asplos2024:
+asplos24:
   title: "BaCO: A Fast and Portable Bayesian Compiler Optimization Framework"
   abstract: "<p>
     We introduce the Bayesian Compiler Optimization framework (BaCO), a general
