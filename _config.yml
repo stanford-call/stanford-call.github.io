@@ -1,7 +1,7 @@
-title: Olivia Hsu 
-author: Olivia Hsu
-email: owhsu@stanford.edu
-email_show: owhsu [at] stanford [dot] edu
+title: Stanford CaLL
+author: Stanford CaLL
+email:
+email_show:
 #description: > # this means to ignore newlines until "twitter_username:"
 #  Write an awesome description for your new site here. You can edit this
 #  line in _config.yml. It will appear in your document head meta (for
@@ -9,9 +9,9 @@ email_show: owhsu [at] stanford [dot] edu
 
 # social links
 # twitter_username: jekyllrb
-github_username:  weiya711
-google_scholar: Olivia Hsu
-linkedin_username: weiya711
+# github_username:  jekyllrb
+# google_scholar: jekyllrb
+# linkedin_username: jekyllrb
 #rss: rss
 # dribbble_username: jekyll
 # facebook_username: jekyll
